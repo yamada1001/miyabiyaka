@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+/**
+ * footer.css
+ * フッター専用スタイルシート
+ */
+
+/* ========================================
+   フッター
+======================================== */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xxl) 0 var(--spacing-md) 0;
+}
+
+/* ========================================
+   フッターコンテナ
+======================================== */
+.footer__container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ========================================
+   フッターコンテンツエリア
+======================================== */
+.footer__content {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ========================================
+   フッター情報エリア
+======================================== */
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+/* フッターロゴ */
+.footer__logo {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer__logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__logo-main {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-white);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.footer__logo-sub {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.1em;
+}
+
+/* フッター説明文 */
+.footer__description {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ========================================
+   フッターナビゲーション
+======================================== */
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.footer__nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* ナビゲーショングループタイトル */
+.footer__nav-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* ナビゲーションリスト */
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__nav-item {
+  /* スタイル不要（リセット済み） */
+}
+
+.footer__nav-link {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  padding-left: 0;
+}
+
+.footer__nav-link:hover {
+  color: var(--color-white);
+  padding-left: 8px;
+  opacity: 1;
+}
+
+/* ========================================
+   コピーライト
+======================================== */
+.footer__copyright {
+  text-align: center;
+  padding-top: var(--spacing-md);
+}
+
+.footer__copyright-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   レスポンシブ対応
+======================================== */
+
+/* タブレット */
+@media (max-width: 1024px) {
+  .footer__nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .footer__nav-group:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* タブレット（小） */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-xl) 0 var(--spacing-md) 0;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .footer__info {
+    gap: var(--spacing-sm);
+  }
+
+  .footer__logo-main {
+    font-size: 1.5rem;
+  }
+
+  .footer__logo-sub {
+    font-size: 0.8rem;
+  }
+
+  .footer__nav {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .footer__nav-group:last-child {
+    grid-column: auto;
+  }
+
+  .footer__nav-title {
+    font-size: 0.9rem;
+  }
+
+  .footer__copyright {
+    padding-top: var(--spacing-sm);
+  }
+}
+
+/* モバイル */
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-lg) 0 var(--spacing-sm) 0;
+  }
+
+  .footer__content {
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+  }
+
+  .footer__logo-main {
+    font-size: 1.25rem;
+  }
+
+  .footer__description {
+    font-size: 0.8rem;
+  }
+
+  .footer__nav {
+    gap: var(--spacing-sm);
+  }
+}

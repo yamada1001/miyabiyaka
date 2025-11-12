@@ -1,0 +1,511 @@
+@charset "UTF-8";
+
+/**
+ * top.css
+ * トップページ専用スタイルシート
+ */
+
+/* ========================================
+   ヒーローセクション
+======================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-primary);
+}
+
+/* ヒーロー背景画像 */
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* ヒーローコンテンツ */
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--color-white);
+  max-width: 800px;
+  padding: 0 var(--container-padding);
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   特徴セクション
+======================================== */
+.features {
+  padding: var(--spacing-xxl) 0;
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.features__item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features__item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px var(--color-shadow);
+}
+
+.features__icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--spacing-md) auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.features__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.features__description {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text-light);
+}
+
+/* ========================================
+   コース紹介セクション
+======================================== */
+.courses {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.courses__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.course-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px var(--color-shadow);
+}
+
+.course-card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.course-card__body {
+  padding: var(--spacing-md);
+}
+
+.course-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.course-card__description {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.course-card__link {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.course-card__link:hover {
+  background-color: var(--color-accent-dark);
+  opacity: 1;
+}
+
+/* ========================================
+   代表挨拶セクション
+======================================== */
+.greeting {
+  padding: var(--spacing-xxl) 0;
+}
+
+.greeting__content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin-top: var(--spacing-xl);
+}
+
+.greeting__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+.greeting__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.greeting__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.greeting__position {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.greeting__message {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+/* ========================================
+   お客様の声セクション
+======================================== */
+.testimonials {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-gray-light);
+}
+
+.testimonials__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.testimonial-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  font-size: 4rem;
+  color: var(--color-accent);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-card__text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.testimonial-card__author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card__author-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.testimonial-card__author-detail {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+/* ========================================
+   新着情報セクション
+======================================== */
+.news {
+  padding: var(--spacing-xxl) 0;
+}
+
+.news__list {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.news-item {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.news-item:hover {
+  background-color: var(--color-gray-light);
+}
+
+.news-item__date {
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.news-item__category {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.news-item__title {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.news-item__link {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.news-item__link:hover .news-item__title {
+  color: var(--color-accent);
+}
+
+/* ========================================
+   CTAセクション
+======================================== */
+.cta {
+  padding: var(--spacing-xxl) 0;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.cta__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.cta__description {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.9;
+}
+
+.cta__button {
+  display: inline-block;
+  padding: 18px 60px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta__button:hover {
+  background-color: var(--color-accent-dark);
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* ========================================
+   レスポンシブ対応
+======================================== */
+
+/* タブレット */
+@media (max-width: 1024px) {
+  .features__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .courses__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .greeting__content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .greeting__image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* タブレット（小） */
+@media (max-width: 768px) {
+  .hero {
+    height: 500px;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features__list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .courses__list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .testimonials__list {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-item__link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta__title {
+    font-size: 1.5rem;
+  }
+}
+
+/* モバイル */
+@media (max-width: 480px) {
+  .hero {
+    height: 400px;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .features__icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .cta__title {
+    font-size: 1.25rem;
+  }
+
+  .cta__button {
+    padding: 14px 40px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="miyabiyaka（みやびやか）着付け教室へのお問い合わせフォーム。無料体験レッスンのお申し込みもこちらから。">
+  <meta name="keywords" content="miyabiyaka,みやびやか,着付け教室,お問い合わせ,体験レッスン,申し込み">
+  <title>お問い合わせ｜miyabiyaka（みやびやか）着付け教室</title>
+
+  <!-- OGP -->
+  <meta property="og:title" content="お問い合わせ｜miyabiyaka（みやびやか）着付け教室">
+  <meta property="og:description" content="お問い合わせ・無料体験レッスンのお申し込みはこちらから。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/contact.html">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/page.css">
+
+  <!-- 構造化データ（ContactPage） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "お問い合わせ",
+    "description": "miyabiyaka（みやびやか）着付け教室へのお問い合わせフォーム"
+  }
+  </script>
+
+  <!-- 構造化データ（BreadcrumbList） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ホーム",
+        "item": "https://example.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "お問い合わせ",
+        "item": "https://example.com/contact.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header"></div>
+
+  <!-- メインコンテンツ -->
+  <main>
+
+    <!-- ページヘッダー -->
+    <section class="page-header" style="background-image: url('https://placehold.co/1920x600/1a1a4d/ffffff?text=Contact');">
+      <div class="page-header__content">
+        <h1 class="page-header__title">お問い合わせ</h1>
+        <p class="page-header__subtitle">Contact</p>
+      </div>
+    </section>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <div class="container">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="/index.html" class="breadcrumb__link">ホーム</a>
+          </li>
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__current">お問い合わせ</span>
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ページコンテンツ -->
+    <div class="page-content">
+      <div class="container">
+        <div class="page-content__inner">
+
+          <!-- お問い合わせフォーム説明 -->
+          <section class="content-section fade-in">
+            <p class="content-section__text">
+              無料体験レッスンのお申し込みやご質問など、
+              お気軽にお問い合わせください。<br>
+              折り返し、担当者よりご連絡させていただきます。
+            </p>
+
+            <div class="info-box mt-lg">
+              <h3 class="info-box__title">お問い合わせについて</h3>
+              <p class="info-box__text">
+                ※このフォームは送信機能が実装されていません。<br>
+                実際のお問い合わせは、下記の参考サイトからお願いいたします。<br>
+                <a href="https://home.tsuku2.jp/storeDetail.php?scd=0000284214" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); text-decoration: underline;">
+                  https://home.tsuku2.jp/storeDetail.php?scd=0000284214
+                </a>
+              </p>
+            </div>
+          </section>
+
+          <!-- お問い合わせフォーム -->
+          <section class="content-section fade-in">
+            <h2 class="content-section__title">お問い合わせフォーム</h2>
+
+            <form class="form" id="contactForm">
+              <!-- お名前 -->
+              <div class="form__group">
+                <label for="name" class="form__label form__label--required">お名前</label>
+                <input type="text" id="name" name="name" class="form__input" required placeholder="山田 花子">
+                <span class="form__error"></span>
+              </div>
+
+              <!-- フリガナ -->
+              <div class="form__group">
+                <label for="furigana" class="form__label">フリガナ</label>
+                <input type="text" id="furigana" name="furigana" class="form__input" placeholder="ヤマダ ハナコ">
+                <span class="form__note">※ひらがな・カタカナでご入力ください</span>
+              </div>
+
+              <!-- メールアドレス -->
+              <div class="form__group">
+                <label for="email" class="form__label form__label--required">メールアドレス</label>
+                <input type="email" id="email" name="email" class="form__input" required placeholder="example@example.com">
+                <span class="form__error"></span>
+              </div>
+
+              <!-- 電話番号 -->
+              <div class="form__group">
+                <label for="tel" class="form__label">電話番号</label>
+                <input type="tel" id="tel" name="tel" class="form__input" placeholder="090-1234-5678">
+                <span class="form__error"></span>
+                <span class="form__note">※ハイフンありでご入力ください</span>
+              </div>
+
+              <!-- お問い合わせ種別 -->
+              <div class="form__group">
+                <label for="type" class="form__label form__label--required">お問い合わせ種別</label>
+                <select id="type" name="type" class="form__select" required>
+                  <option value="">選択してください</option>
+                  <option value="trial">無料体験レッスンのお申し込み</option>
+                  <option value="course">コースについてのお問い合わせ</option>
+                  <option value="price">料金についてのお問い合わせ</option>
+                  <option value="access">アクセスについてのお問い合わせ</option>
+                  <option value="other">その他</option>
+                </select>
+                <span class="form__error"></span>
+              </div>
+
+              <!-- お問い合わせ内容 -->
+              <div class="form__group">
+                <label for="message" class="form__label form__label--required">お問い合わせ内容</label>
+                <textarea id="message" name="message" class="form__textarea" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+                <span class="form__error"></span>
+              </div>
+
+              <!-- プライバシーポリシー同意 -->
+              <div class="form__group">
+                <label style="display: flex; align-items: start; gap: 8px; cursor: pointer;">
+                  <input type="checkbox" name="privacy" required style="margin-top: 4px;">
+                  <span>
+                    <a href="/privacy.html" target="_blank" style="color: var(--color-accent); text-decoration: underline;">プライバシーポリシー</a>に同意する
+                  </span>
+                </label>
+                <span class="form__error"></span>
+              </div>
+
+              <!-- 送信ボタン -->
+              <button type="submit" class="btn btn--primary btn--large form__submit">送信する</button>
+            </form>
+          </section>
+
+          <!-- その他のお問い合わせ方法 -->
+          <section class="content-section fade-in">
+            <h2 class="content-section__title">その他のお問い合わせ方法</h2>
+
+            <p class="content-section__text">
+              フォームからのお問い合わせのほか、以下の方法でもお問い合わせいただけます。
+            </p>
+
+            <div class="info-box">
+              <h3 class="info-box__title">お電話でのお問い合わせ</h3>
+              <p class="info-box__text">
+                電話番号: 詳しくはお問い合わせください<br>
+                受付時間: 詳しくはお問い合わせください
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3 class="info-box__title">参考サイト</h3>
+              <p class="info-box__text">
+                <a href="https://home.tsuku2.jp/storeDetail.php?scd=0000284214" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); text-decoration: underline;">
+                  https://home.tsuku2.jp/storeDetail.php?scd=0000284214
+                </a>
+              </p>
+            </div>
+          </section>
+
+          <!-- 注意事項 -->
+          <section class="content-section fade-in">
+            <h2 class="content-section__title">ご注意事項</h2>
+
+            <ul class="content-list">
+              <li>お問い合わせ内容によっては、ご返信までにお時間をいただく場合がございます</li>
+              <li>土日祝日、年末年始などはご返信が遅れる場合がございます</li>
+              <li>迷惑メール対策等でドメイン指定受信を設定されている方は、当教室からのメールが受信できるよう設定をお願いいたします</li>
+              <li>数日経ってもご返信がない場合は、お手数ですが再度お問い合わせください</li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- フッター -->
+  <div id="footer"></div>
+
+  <!-- JavaScript -->
+  <script src="js/components.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/common.js" defer></script>
+
+</body>
+</html>
