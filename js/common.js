@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // スムーススクロール
   initSmoothScroll();
 
-  // ページトップボタン
-  initPageTop();
-
   // アコーディオン
   initAccordion();
 
@@ -90,42 +87,6 @@ function initSmoothScroll() {
           behavior: 'smooth'
         });
       }
-    });
-  });
-}
-
-/* ========================================
-   ページトップボタン
-======================================== */
-function initPageTop() {
-  // ページトップボタンを作成
-  const pageTopButton = document.createElement('button');
-  pageTopButton.className = 'page-top';
-  pageTopButton.innerHTML = '↑';
-  pageTopButton.setAttribute('aria-label', 'ページトップへ戻る');
-  document.body.appendChild(pageTopButton);
-
-  // スクロール時の表示制御
-  let ticking = false;
-  window.addEventListener('scroll', function() {
-    if (!ticking) {
-      window.requestAnimationFrame(function() {
-        if (window.pageYOffset > 300) {
-          pageTopButton.classList.add('is-visible');
-        } else {
-          pageTopButton.classList.remove('is-visible');
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
-
-  // クリックイベント
-  pageTopButton.addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
     });
   });
 }
@@ -308,51 +269,3 @@ function initLazyLoad() {
   }
 }
 
-/* ========================================
-   ページトップボタンのCSS（動的に追加）
-======================================== */
-const pageTopStyles = `
-  .page-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-accent, #d32f2f);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-  }
-
-  .page-top.is-visible {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .page-top:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
-
-  @media (max-width: 768px) {
-    .page-top {
-      width: 45px;
-      height: 45px;
-      font-size: 1.25rem;
-      bottom: 15px;
-      right: 15px;
-    }
-  }
-`;
-
-// スタイルを追加
-const styleSheet = document.createElement('style');
-styleSheet.textContent = pageTopStyles;
-document.head.appendChild(styleSheet);

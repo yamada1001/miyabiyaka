@@ -5,11 +5,14 @@
  * ヘッダー専用スタイルシート
  */
 
+/* Font Awesome (CDN) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
 /* ========================================
    ヘッダー
 ======================================== */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -236,17 +239,38 @@
 
   .header__nav-list {
     flex-direction: column;
-    align-items: stretch;
-    gap: 0;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
   }
 
   .header__nav-item {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: none;
+    width: 100%;
+    max-width: 280px;
   }
 
   .header__nav-link {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-md);
     font-size: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+  }
+
+  .header__nav-link:hover {
+    background-color: var(--color-gray-light);
+    transform: translateX(4px);
+  }
+
+  .header__nav-link.is-active {
+    background-color: rgba(var(--color-accent-rgb), 0.1);
+    color: var(--color-accent);
   }
 
   .header__nav-link.is-active::after {
@@ -256,15 +280,70 @@
   /* CTAボタン */
   .header__nav-item--cta {
     margin-left: 0;
-    margin-top: var(--spacing-sm);
-    padding: 0 var(--spacing-md);
+    margin-top: var(--spacing-md);
+    padding: 0;
   }
 
   .header__nav-link--cta {
     display: block;
     text-align: center;
-    padding: var(--spacing-sm);
-    border-radius: 4px;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .header__nav-link--cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* メニュー項目にアイコンを追加 */
+  .header__nav-link[href*="about"]::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f05a";
+  }
+
+  .header__nav-link[href*="course"]::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f19d";
+  }
+
+  .header__nav-link[href*="price"]::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f02d";
+  }
+
+  .header__nav-link[href*="instructor"]::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f007";
+  }
+
+  .header__nav-link[href*="access"]::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f3c5";
+  }
+
+  .header__nav-link[href*="faq"]::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f059";
+  }
+
+  .header__nav-link[href*="blog"]::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f15c";
+  }
+
+  .header__nav-link--cta::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0e0";
   }
 
   /* オーバーレイ */

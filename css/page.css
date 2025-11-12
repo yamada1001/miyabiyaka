@@ -403,6 +403,18 @@
     padding: var(--spacing-xl) 0;
   }
 
+  /* グリッドレイアウトを1カラムに */
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-md) !important;
+  }
+
+  /* 画像を含むグリッドの調整 */
+  div[style*="grid-template-columns"] img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .content-section {
     margin-bottom: var(--spacing-xl);
   }

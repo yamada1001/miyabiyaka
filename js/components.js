@@ -149,9 +149,28 @@ const footerHTML = `
 `;
 
 /* ========================================
+   SEO設定管理
+======================================== */
+// 公開前はtrue、公開後はfalseに変更
+const IS_UNDER_CONSTRUCTION = true;
+
+function initSEO() {
+  if (IS_UNDER_CONSTRUCTION) {
+    // noindexメタタグを動的に追加
+    const metaRobots = document.createElement('meta');
+    metaRobots.name = 'robots';
+    metaRobots.content = 'noindex, nofollow';
+    document.head.appendChild(metaRobots);
+  }
+}
+
+/* ========================================
    DOM読み込み完了時の処理
 ======================================== */
 document.addEventListener('DOMContentLoaded', function() {
+  // SEO設定の初期化
+  initSEO();
+
   // ヘッダーの挿入
   const headerElement = document.getElementById('header');
   if (headerElement) {
