@@ -239,9 +239,11 @@
 
   .header__nav-list {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 0;
     padding: var(--spacing-md) 0;
+    width: 75%;
+    margin: 0 auto;
   }
 
   .header__nav-item {
