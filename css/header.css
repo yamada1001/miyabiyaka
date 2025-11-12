@@ -242,7 +242,7 @@
     align-items: stretch;
     gap: 0;
     padding: var(--spacing-md) 0;
-    margin-right: 80px;
+    margin-right: 85px;
   }
 
   .header__nav-item {
