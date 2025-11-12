@@ -96,7 +96,7 @@
 
 /* メニューオープン時のアニメーション */
 .header__menu-button.is-active .header__menu-icon:nth-child(1) {
-  transform: translateY(10.5px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
 
 .header__menu-button.is-active .header__menu-icon:nth-child(2) {
@@ -104,7 +104,7 @@
 }
 
 .header__menu-button.is-active .header__menu-icon:nth-child(3) {
-  transform: translateY(-10.5px) rotate(-45deg);
+  transform: translateY(-11px) rotate(-45deg);
 }
 
 /* ========================================

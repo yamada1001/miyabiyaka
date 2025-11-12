@@ -30,9 +30,6 @@ const headerHTML = `
       <nav class="header__nav" id="headerNav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="/miyabiyaka/index.html" class="header__nav-link">ホーム</a>
-          </li>
-          <li class="header__nav-item">
             <a href="/miyabiyaka/about.html" class="header__nav-link">教室について</a>
           </li>
           <li class="header__nav-item">
