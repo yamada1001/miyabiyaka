@@ -239,38 +239,40 @@
 
   .header__nav-list {
     flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-md);
+    align-items: stretch;
+    gap: 0;
+    padding: var(--spacing-md) 0;
   }
 
   .header__nav-item {
-    border-bottom: none;
     width: 100%;
-    max-width: 280px;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header__nav-item:last-child {
+    border-bottom: none;
   }
 
   .header__nav-link {
-    padding: var(--spacing-md);
+    display: block;
+    padding: var(--spacing-md) var(--spacing-lg);
     font-size: 1rem;
+    font-weight: 500;
     text-align: center;
-    border-radius: 8px;
+    color: var(--color-text);
     background-color: transparent;
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xs);
   }
 
   .header__nav-link:hover {
     background-color: var(--color-gray-light);
-    transform: translateX(4px);
+    color: var(--color-accent);
   }
 
   .header__nav-link.is-active {
-    background-color: rgba(var(--color-accent-rgb), 0.1);
+    background-color: var(--color-gray-light);
     color: var(--color-accent);
+    font-weight: 700;
   }
 
   .header__nav-link.is-active::after {
@@ -281,69 +283,26 @@
   .header__nav-item--cta {
     margin-left: 0;
     margin-top: var(--spacing-md);
-    padding: 0;
+    border-bottom: none;
   }
 
   .header__nav-link--cta {
     display: block;
     text-align: center;
-    padding: var(--spacing-md);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: 0 var(--spacing-md);
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.3);
   }
 
   .header__nav-link--cta:hover {
+    background-color: var(--color-accent-dark);
+    color: var(--color-white);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-
-  /* メニュー項目にアイコンを追加 */
-  .header__nav-link[href*="about"]::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f05a";
-  }
-
-  .header__nav-link[href*="course"]::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f19d";
-  }
-
-  .header__nav-link[href*="price"]::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f02d";
-  }
-
-  .header__nav-link[href*="instructor"]::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f007";
-  }
-
-  .header__nav-link[href*="access"]::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f3c5";
-  }
-
-  .header__nav-link[href*="faq"]::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f059";
-  }
-
-  .header__nav-link[href*="blog"]::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f15c";
-  }
-
-  .header__nav-link--cta::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f0e0";
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
   }
 
   /* オーバーレイ */
