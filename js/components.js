@@ -11,7 +11,7 @@ const headerHTML = `
     <div class="header__container">
       <!-- ロゴ -->
       <div class="header__logo">
-        <a href="/index.html" class="header__logo-link">
+        <a href="/miyabiyaka/index.html" class="header__logo-link">
           <h1 class="header__logo-text">
             <span class="header__logo-main">miyabiyaka</span>
             <span class="header__logo-sub">みやびやか 着付け教室</span>
@@ -30,31 +30,31 @@ const headerHTML = `
       <nav class="header__nav" id="headerNav">
         <ul class="header__nav-list">
           <li class="header__nav-item">
-            <a href="/index.html" class="header__nav-link">ホーム</a>
+            <a href="/miyabiyaka/index.html" class="header__nav-link">ホーム</a>
           </li>
           <li class="header__nav-item">
-            <a href="/about.html" class="header__nav-link">教室について</a>
+            <a href="/miyabiyaka/about.html" class="header__nav-link">教室について</a>
           </li>
           <li class="header__nav-item">
-            <a href="/course.html" class="header__nav-link">コース案内</a>
+            <a href="/miyabiyaka/course.html" class="header__nav-link">コース案内</a>
           </li>
           <li class="header__nav-item">
-            <a href="/price.html" class="header__nav-link">料金表</a>
+            <a href="/miyabiyaka/price.html" class="header__nav-link">料金表</a>
           </li>
           <li class="header__nav-item">
-            <a href="/instructor.html" class="header__nav-link">講師紹介</a>
+            <a href="/miyabiyaka/instructor.html" class="header__nav-link">講師紹介</a>
           </li>
           <li class="header__nav-item">
-            <a href="/access.html" class="header__nav-link">アクセス</a>
+            <a href="/miyabiyaka/access.html" class="header__nav-link">アクセス</a>
           </li>
           <li class="header__nav-item">
-            <a href="/faq.html" class="header__nav-link">よくある質問</a>
+            <a href="/miyabiyaka/faq.html" class="header__nav-link">よくある質問</a>
           </li>
           <li class="header__nav-item">
-            <a href="/blog/index.html" class="header__nav-link">ブログ</a>
+            <a href="/miyabiyaka/blog/index.html" class="header__nav-link">ブログ</a>
           </li>
           <li class="header__nav-item header__nav-item--cta">
-            <a href="/contact.html" class="header__nav-link header__nav-link--cta">お問い合わせ</a>
+            <a href="/miyabiyaka/contact.html" class="header__nav-link header__nav-link--cta">お問い合わせ</a>
           </li>
         </ul>
       </nav>
@@ -91,16 +91,16 @@ const footerHTML = `
             <h3 class="footer__nav-title">教室案内</h3>
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
-                <a href="/about.html" class="footer__nav-link">教室について</a>
+                <a href="/miyabiyaka/about.html" class="footer__nav-link">教室について</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/course.html" class="footer__nav-link">コース案内</a>
+                <a href="/miyabiyaka/course.html" class="footer__nav-link">コース案内</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/price.html" class="footer__nav-link">料金表</a>
+                <a href="/miyabiyaka/price.html" class="footer__nav-link">料金表</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/instructor.html" class="footer__nav-link">講師紹介</a>
+                <a href="/miyabiyaka/instructor.html" class="footer__nav-link">講師紹介</a>
               </li>
             </ul>
           </div>
@@ -109,16 +109,16 @@ const footerHTML = `
             <h3 class="footer__nav-title">サポート</h3>
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
-                <a href="/access.html" class="footer__nav-link">アクセス</a>
+                <a href="/miyabiyaka/access.html" class="footer__nav-link">アクセス</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/faq.html" class="footer__nav-link">よくある質問</a>
+                <a href="/miyabiyaka/faq.html" class="footer__nav-link">よくある質問</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/contact.html" class="footer__nav-link">お問い合わせ</a>
+                <a href="/miyabiyaka/contact.html" class="footer__nav-link">お問い合わせ</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/blog/index.html" class="footer__nav-link">ブログ</a>
+                <a href="/miyabiyaka/blog/index.html" class="footer__nav-link">ブログ</a>
               </li>
             </ul>
           </div>
@@ -127,13 +127,13 @@ const footerHTML = `
             <h3 class="footer__nav-title">その他</h3>
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
-                <a href="/company.html" class="footer__nav-link">教室概要</a>
+                <a href="/miyabiyaka/company.html" class="footer__nav-link">教室概要</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/privacy.html" class="footer__nav-link">プライバシーポリシー</a>
+                <a href="/miyabiyaka/privacy.html" class="footer__nav-link">プライバシーポリシー</a>
               </li>
               <li class="footer__nav-item">
-                <a href="/sitemap.html" class="footer__nav-link">サイトマップ</a>
+                <a href="/miyabiyaka/sitemap.html" class="footer__nav-link">サイトマップ</a>
               </li>
             </ul>
           </div>
